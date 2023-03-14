@@ -1,5 +1,224 @@
 # stellar-purchase-api
 
+
+PuchasePointCalcApi request and response
+
+curl --location 'https://localhost:7053/api/customer/purchasePointDetails?startDate=2023-01-01&endDate=2023-03-31' \
+--header 'Api-Key: f7370184-1674-48f6-b9d2-cb228dd0d92e-f7370184-1674-48f6-b9d2-cb228dd0d92e' \
+--data '' 
+
+[
+    {
+        "customerName": "Abhishek Mishra",
+        "email": "abhishek.mishra@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 2,
+                "monthlySum": 200
+            },
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 346
+            }
+        ],
+        "totalPoints": 546
+    },
+    {
+        "customerName": "Vinay Kumar",
+        "email": "vinay@gmail.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 140
+            }
+        ],
+        "totalPoints": 140
+    },
+    {
+        "customerName": "Rohit Kumar",
+        "email": "rohit.kumar@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 618
+            }
+        ],
+        "totalPoints": 618
+    },
+    {
+        "customerName": "Sanjay Singh",
+        "email": "sanjay.singh@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 308
+            },
+            {
+                "year": 2023,
+                "month": 2,
+                "monthlySum": 320
+            },
+            {
+                "year": 2023,
+                "month": 3,
+                "monthlySum": 264
+            }
+        ],
+        "totalPoints": 892
+    },
+    {
+        "customerName": "Kunal Sharma",
+        "email": "kunal.sharma@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 3,
+                "monthlySum": 19
+            },
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 132
+            }
+        ],
+        "totalPoints": 151
+    },
+    {
+        "customerName": "Anjali Gupta",
+        "email": "anjali.gupta@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 2,
+                "monthlySum": 56
+            },
+            {
+                "year": 2023,
+                "month": 3,
+                "monthlySum": 5
+            }
+        ],
+        "totalPoints": 61
+    },
+    {
+        "customerName": "Sujata Sahoo",
+        "email": "sujata.sahoo@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 3,
+                "monthlySum": 278
+            }
+        ],
+        "totalPoints": 278
+    },
+    {
+        "customerName": "Rajesh Khanna",
+        "email": "rajesh.khanna@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 2,
+                "monthlySum": 134
+            },
+            {
+                "year": 2023,
+                "month": 3,
+                "monthlySum": 150
+            }
+        ],
+        "totalPoints": 284
+    },
+    {
+        "customerName": "Priya Patel",
+        "email": "priya.patel@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 3,
+                "monthlySum": 75
+            }
+        ],
+        "totalPoints": 75
+    },
+    {
+        "customerName": "Rahul Sharma",
+        "email": "rahul.sharma@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 3,
+                "monthlySum": 0
+            },
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 0
+            },
+            {
+                "year": 2023,
+                "month": 2,
+                "monthlySum": 0
+            }
+        ],
+        "totalPoints": 0
+    },
+    {
+        "customerName": "Manzoor Ahmed",
+        "email": "manzoor@hotmail.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 268
+            }
+        ],
+        "totalPoints": 268
+    },
+    {
+        "customerName": "Mahesh Kumar Patil",
+        "email": "mahesh@gmail.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 324
+            }
+        ],
+        "totalPoints": 324
+    },
+    {
+        "customerName": "Manisha Chauhan",
+        "email": "manisha.chauhan@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 2,
+                "monthlySum": 102
+            }
+        ],
+        "totalPoints": 102
+    },
+    {
+        "customerName": "Shweta Singh",
+        "email": "shweta.singh@stellar.com",
+        "monthlyPoints": [
+            {
+                "year": 2023,
+                "month": 1,
+                "monthlySum": 188
+            }
+        ],
+        "totalPoints": 188
+    }
+]
+
+
 Customers table data
 |idCustomer                          |Name              |Email                      |
 |------------------------------------|------------------|---------------------------|
