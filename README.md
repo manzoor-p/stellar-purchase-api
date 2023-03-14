@@ -7,6 +7,7 @@ curl --location 'https://localhost:7053/api/customer/purchasePointDetails?startD
 --header 'Api-Key: f7370184-1674-48f6-b9d2-cb228dd0d92e-f7370184-1674-48f6-b9d2-cb228dd0d92e' \
 --data '' 
 
+``` json
 [
     {
         "customerName": "Abhishek Mishra",
@@ -217,7 +218,7 @@ curl --location 'https://localhost:7053/api/customer/purchasePointDetails?startD
         "totalPoints": 188
     }
 ]
-
+```
 
 Customers table data
 |idCustomer                          |Name              |Email                      |
