@@ -1,12 +1,15 @@
 # stellar-purchase-api
 
 
-PuchasePointCalcApi request and response
+### PuchasePointCalcApi request and response
 
+#### Request
 curl --location 'https://localhost:7053/api/customer/purchasePointDetails?startDate=2023-01-01&endDate=2023-03-31' \
 --header 'Api-Key: f7370184-1674-48f6-b9d2-cb228dd0d92e-f7370184-1674-48f6-b9d2-cb228dd0d92e' \
 --data '' 
 
+
+#### Response
 ``` json
 [
     {
@@ -220,7 +223,7 @@ curl --location 'https://localhost:7053/api/customer/purchasePointDetails?startD
 ]
 ```
 
-Customers table data
+### Customers table data
 |idCustomer                          |Name              |Email                      |
 |------------------------------------|------------------|---------------------------|
 |013ff91b-fd27-496f-8de2-7a93e58c7d7f|Nisha Gupta       |nisha.gupta@stellar.com    |
@@ -248,7 +251,7 @@ Customers table data
 |fd7c7498-cbff-41c2-95dc-2309c3a14647|Bob Johnson       |bob.johnson@stellar.com    |
 
 
-Purchases Table data
+### Purchases Table data
 |idPurchase                          |idCustomer        |PurchaseDate               |TotalAmount|
 |------------------------------------|------------------|---------------------------|-----------|
 |0362ac96-9b2d-4f09-8690-fd4206b73fed|8a1f990f-eb8f-4700-9a4e-85e862200770|2022-10-31 00:00:00        |10.00      |
@@ -311,7 +314,7 @@ Purchases Table data
 
 
 
-All Customer's purchase details
+### All Customer's purchase details
 ``` sql
 select * from customers
 select c.Name as customerName, p.PurchaseDate, p.TotalAmount 
