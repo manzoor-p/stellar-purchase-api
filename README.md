@@ -312,11 +312,12 @@ Purchases Table data
 
 
 All Customer's purchase details
-
+``` sql
 select * from customers
 select c.Name as customerName, p.PurchaseDate, p.TotalAmount 
 from customers c inner join purchases p on c.idCustomer = p.idCustomer
 order by c.Name
+```
 
 |customerName                        |PurchaseDate      |TotalAmount                |
 |------------------------------------|------------------|---------------------------|
