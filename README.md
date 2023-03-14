@@ -88,3 +88,72 @@ Purchases Table data
 |f3c7ba68-832a-4b4e-9744-3f4b26dcd41c|d9b3c8a3-e41a-47f6-86e2-2d0cbf0cdecd|2022-03-12 00:00:00        |100.00     |
 |fe0d3678-f1ec-418a-96b2-19aaf71ceb9f|880f2867-8461-402c-a3bd-c3528222d749|2023-03-12 00:00:00        |75.00      |
 |feb16c3d-1c66-4cfd-9bdf-8280103fc709|8a1f990f-eb8f-4700-9a4e-85e862200770|2022-10-18 00:00:00        |25.50      |
+
+
+
+All Customer's purchase details
+
+select * from customers
+select c.Name as customerName, p.PurchaseDate, p.TotalAmount 
+from customers c inner join purchases p on c.idCustomer = p.idCustomer
+order by c.Name
+
+|customerName                        |PurchaseDate      |TotalAmount                |
+|------------------------------------|------------------|---------------------------|
+|Abhishek Mishra                     |2023-02-11 20:15:00|175.65                     |
+|Abhishek Mishra                     |2023-01-01 03:11:00|248.62                     |
+|Abhishek Mishra                     |2022-12-07 22:01:00|98.51                      |
+|Anjali Gupta                        |2023-03-02 08:16:00|55.02                      |
+|Anjali Gupta                        |2023-02-27 18:31:00|103.01                     |
+|Anjali Gupta                        |2022-12-14 10:09:00|33.57                      |
+|Anjali Gupta                        |2022-12-27 08:59:00|153.43                     |
+|Anjali Gupta                        |2022-12-03 01:30:00|76.67                      |
+|Anjali Gupta                        |2022-12-18 08:43:00|243.67                     |
+|Bob Johnson                         |2022-03-09 00:00:00|125.00                     |
+|Bob Johnson                         |2022-03-10 00:00:00|30.00                      |
+|Jane Smith                          |2022-03-11 00:00:00|75.00                      |
+|John Doe                            |2022-03-12 00:00:00|100.00                     |
+|John Doe                            |2022-03-13 00:00:00|50.00                      |
+|Kunal Sharma                        |2023-03-01 04:47:00|69.66                      |
+|Kunal Sharma                        |2022-11-27 03:55:00|149.65                     |
+|Kunal Sharma                        |2023-01-30 15:00:00|141.85                     |
+|Mahesh Kumar Patil                  |2023-01-03 00:00:00|200.00                     |
+|Mahesh Kumar Patil                  |2023-01-01 00:00:00|112.00                     |
+|Manisha Chauhan                     |2022-11-12 02:49:00|32.28                      |
+|Manisha Chauhan                     |2022-12-20 09:52:00|67.24                      |
+|Manisha Chauhan                     |2023-02-08 00:13:00|126.41                     |
+|Manzoor Ahmed                       |2023-01-01 00:00:00|100.00                     |
+|Manzoor Ahmed                       |2023-01-03 00:00:00|149.00                     |
+|Manzoor Ahmed                       |2023-01-02 00:00:00|110.00                     |
+|Priya Patel                         |2023-03-14 00:00:00|100.00                     |
+|Priya Patel                         |2023-03-13 00:00:00|50.00                      |
+|Priya Patel                         |2023-03-12 00:00:00|75.00                      |
+|Rahul Sharma                        |2022-10-31 00:00:00|10.00                      |
+|Rahul Sharma                        |2022-11-25 00:00:00|32.99                      |
+|Rahul Sharma                        |2023-03-05 00:00:00|22.50                      |
+|Rahul Sharma                        |2023-01-28 00:00:00|45.75                      |
+|Rahul Sharma                        |2022-10-18 00:00:00|25.50                      |
+|Rahul Sharma                        |2023-02-12 00:00:00|50.75                      |
+|Rahul Sharma                        |2022-12-03 00:00:00|75.99                      |
+|Rajesh Khanna                       |2022-11-18 22:08:00|225.13                     |
+|Rajesh Khanna                       |2023-02-16 15:26:00|142.35                     |
+|Rajesh Khanna                       |2023-03-05 14:51:00|150.00                     |
+|Rohit Kumar                         |2022-12-14 17:10:00|130.30                     |
+|Rohit Kumar                         |2023-01-12 00:54:00|232.11                     |
+|Rohit Kumar                         |2023-01-06 17:28:00|227.63                     |
+|Rohit Kumar                         |2022-12-02 05:07:00|222.45                     |
+|Rohit Kumar                         |2022-11-16 14:38:00|248.31                     |
+|Rohit Kumar                         |2022-12-22 09:27:00|37.24                      |
+|Sanjay Singh                        |2023-03-24 02:19:00|25.29                      |
+|Sanjay Singh                        |2023-03-16 10:36:00|207.14                     |
+|Sanjay Singh                        |2023-02-11 09:03:00|235.28                     |
+|Sanjay Singh                        |2023-02-10 07:32:00|11.67                      |
+|Sanjay Singh                        |2023-01-14 22:02:00|229.99                     |
+|Sanjay Singh                        |2022-12-11 11:48:00|86.61                      |
+|Shweta Singh                        |2022-12-01 01:30:00|234.83                     |
+|Shweta Singh                        |2023-01-30 10:41:00|169.78                     |
+|Shweta Singh                        |2022-12-23 03:46:00|164.26                     |
+|Sujata Sahoo                        |2023-03-15 10:58:00|214.07                     |
+|Sujata Sahoo                        |2022-11-18 11:49:00|210.59                     |
+|Sujata Sahoo                        |2022-11-06 13:07:00|170.57                     |
+|Vinay Kumar                         |2023-01-01 00:00:00|145.00                     |
