@@ -33,7 +33,7 @@ namespace PurchasePointCalcAPI.Controllers
                 _logger.LogInfo($"Returned all owners from database.");
 
                 var customersResult = _mapper.Map<IEnumerable<CustomerDto>>(customers);
-                return Ok(customers);
+                return Ok(customersResult);
             }
             catch(Exception ex)
             {

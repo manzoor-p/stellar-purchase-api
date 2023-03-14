@@ -71,7 +71,7 @@ namespace Repository
                 ).ToList();
             return allCustomersPoints;
         }
-        private int CalculatePurchasePoints(decimal totalAmount)
+        public int CalculatePurchasePoints(decimal totalAmount)
         {
             int points = 0;
 
