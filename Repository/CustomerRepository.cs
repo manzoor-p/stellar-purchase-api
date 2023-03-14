@@ -52,6 +52,12 @@ namespace Repository
                 .Include(c => c.Purchases)
                 .Where(c =>
                          c.Purchases.Any(p => p.PurchaseDate >= startDate && p.PurchaseDate <= endDate) == true)
+                .Select(c => new Customer
+                { 
+                    Name = c.Name,
+                    Email = c.Email,
+                    Purchases = (List<Purchase>) c.Purchases.Where(p=> p.PurchaseDate >= startDate && p.PurchaseDate <= endDate)
+                })
                 .ToList();
 
             List<CustomerPurchasePointsDTO> allCustomersPoints = allCustomerPurchases

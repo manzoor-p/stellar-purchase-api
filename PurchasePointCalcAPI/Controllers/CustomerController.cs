@@ -16,7 +16,6 @@ namespace PurchasePointCalcAPI.Controllers
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
         private IMapper _mapper;
-        //private IPurchasePointsService _purchasePointsService;
 
         public CustomerController(ILoggerManager logger, IRepositoryWrapper repository, IMapper mapper)
         {
