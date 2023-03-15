@@ -1,7 +1,12 @@
 using Contracts;
+using Google.Apis.Compute.v1.Data;
+using HealthChecks.MySql;
+using HealthChecks.SqlServer;
 using LoggerService;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using NLog;
 using PurchasePointCalcAPI.Extensions;
 using PurchasePointCalcAPI.Services;
@@ -20,9 +25,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureLoggerService();
 builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
-builder.Services.ConfigureMySqlContext(builder.Configuration);
-builder.Services.AddAutoMapper(typeof(Program));
 
+//Registering the ApplicationContext class.
+//The actual implementation has been done in the ServiceExtension.cs class just to demonstrate that this way the Program.cs class can be simplified.
+builder.Services.ConfigureMySqlContext(builder.Configuration);
+builder.Services.AddAutoMapper(typeof(Program));   
+
+//Adding MySql db connection as part of the application health check.
+builder.Services.AddHealthChecks()
+    .AddMySql(
+        connectionString: builder.Configuration["mysqlconnection:connectionString"],
+        name: "Database",
+        failureStatus: Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Degraded);
 
 var app = builder.Build();
 
@@ -44,4 +58,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 app.UseCors("CorsPolicy");
 app.UseAuthorization();
 app.MapControllers();
+
+//Adding endpoint for application health check.
+app.MapHealthChecks("/health");
 app.Run();

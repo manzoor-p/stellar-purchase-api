@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
+    //This Wrapper class has been created around the other repository classes 
+    //so that we can instantiate this once and call any repository class.
     public class RepositoryWrapper : IRepositoryWrapper
     {
         private RepositoryContext _repositoryContext;
